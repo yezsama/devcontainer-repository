@@ -7,7 +7,7 @@ Installs the @openai/codex CLI and its shell completions.
 
 ```json
 "features": {
-    "ghcr.io/yezsama/devpod-features/openai-codex:1": {}
+    "ghcr.io/yezsama/devcontainer-features/openai-codex:1": {}
 }
 ```
 
@@ -17,4 +17,4 @@ Installs the @openai/codex CLI and its shell completions.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/yezsama/devpod-repository/blob/main/src/openai-codex/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/yezsama/devcontainer-repository/blob/main/src/openai-codex/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._

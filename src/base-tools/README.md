@@ -7,7 +7,7 @@ Installs Neovim, Zsh, Curl and Git inside the dev container.
 
 ```json
 "features": {
-    "ghcr.io/yezsama/devpod-features/base-tools:0": {}
+    "ghcr.io/yezsama/devcontainer-features/base-tools:0": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs Neovim, Zsh, Curl and Git inside the dev container.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/yezsama/devpod-repository/blob/main/src/base-tools/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/yezsama/devcontainer-repository/blob/main/src/base-tools/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
