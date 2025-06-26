@@ -20,8 +20,8 @@ jobs:
           base-path-to-features: "./src"
           generate-docs: "true"
           oci-registry: "ghcr.io"
-          features-namespace: "yezsama/devpod-features"
-          
+          features-namespace: "yezsama/devcontainer-features"
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
