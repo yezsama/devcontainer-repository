@@ -11,7 +11,7 @@ if ! command -v npm >/dev/null 2>&1; then
     exit 1
 fi
 
-npm install -g @google-ai/gemini-cli
+npm install -g @google/gemini-cli
 
 ############################################
 # 2. 可选：为当前用户补全 PATH（某些基础镜像 npm 全局路径不在 PATH）

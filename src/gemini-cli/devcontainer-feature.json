@@ -1,6 +1,6 @@
 {
   "id": "gemini-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Gemini CLI",
   "description": "Installs the @google-ai/gemini-cli and its shell completions.",
   "documentationURL": "https://github.com/google/gemini-cli",
