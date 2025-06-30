@@ -1,6 +1,6 @@
 {
   "id": "gemini-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "Gemini CLI",
   "description": "Installs the @google-ai/gemini-cli and its shell completions.",
   "documentationURL": "https://github.com/google/gemini-cli",
@@ -10,14 +10,10 @@
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {
       "version": "latest"
-    },
-    "ghcr.io/yezsama/devpod-features/base-tools": {
-      "version": "latest"
     }
   },
 
   "installsAfter": [
-    "ghcr.io/devcontainers/features/node",
-    "ghcr.io/yezsama/devpod-features/base-tools"
+    "ghcr.io/devcontainers/features/node"
   ]
 }

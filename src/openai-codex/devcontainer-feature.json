@@ -1,6 +1,6 @@
 {
   "id": "openai-codex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "OpenAI Codex CLI",
   "description": "Installs the @openai/codex CLI and its shell completions.",
   "documentationURL": "https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started",
@@ -10,15 +10,11 @@
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {
       "version": "latest"
-    },
-    "ghcr.io/yezsama/devpod-features/base-tools": {
-      "version": "latest"
     }
   },
 
   "installsAfter": [
-        "ghcr.io/devcontainers/features/node",
-        "ghcr.io/yezsama/devpod-features/base-tools"
+        "ghcr.io/devcontainers/features/node"
     ],
 
   "containerEnv": {

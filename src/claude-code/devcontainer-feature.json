@@ -1,6 +1,6 @@
 {
   "id": "claude-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Claude Code CLI",
   "description": "Installs the @anthropic-ai/claude-code CLI and its shell completions.",
   "documentationURL": "https://github.com/anthropic-ai/claude-code",
@@ -10,14 +10,10 @@
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {
       "version": "latest"
-    },
-    "ghcr.io/yezsama/devpod-features/base-tools": {
-      "version": "latest"
     }
   },
 
   "installsAfter": [
-        "ghcr.io/devcontainers/features/node",
-        "ghcr.io/yezsama/devpod-features/base-tools"
+        "ghcr.io/devcontainers/features/node"
     ]
 }
