@@ -10,14 +10,10 @@
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {
       "version": "latest"
-    },
-    "ghcr.io/yezsama/devpod-features/base-tools": {
-      "version": "latest"
     }
   },
 
   "installsAfter": [
-        "ghcr.io/devcontainers/features/node",
-        "ghcr.io/yezsama/devpod-features/base-tools"
+        "ghcr.io/devcontainers/features/node"
     ]
 }
