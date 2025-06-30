@@ -1,6 +1,6 @@
 {
   "id": "claude-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Claude Code CLI",
   "description": "Installs the @anthropic-ai/claude-code CLI and its shell completions.",
   "documentationURL": "https://github.com/anthropic-ai/claude-code",
