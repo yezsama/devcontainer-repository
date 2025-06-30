@@ -52,7 +52,7 @@ if ! command -v rustup >/dev/null 2>&1; then
 fi
 
 echo "  Installing additional Rust Dev Tools …"
-RUN rustup component add rust-gdb rust-lldb \
+rustup component add rust-gdb rust-lldb \
     && cargo install cargo-watch
 
 ############################################
@@ -62,10 +62,11 @@ if [ "${FEATURE_WITHNIGHTLYTOOLS:-true}" = "true" ]; then
     # if the nightly toolchain is not installed install it
     if ! rustup toolchain list | grep -q "nightly"; then
         echo "  Nightly toolchain not found, installing it …"
-        RUN rustup toolchain install nightly
+        rustup toolchain install nightly
+        rustup default nightly
     fi
     echo "  Nightly toolchain detected, adding rust-src and miri components …"
-    RUN rustup component add rust-src miri --toolchain nightly
+    rustup component add rust-src miri --toolchain nightly
 fi
 
 echo "✅ Rust Dev Tools installation finished!"
