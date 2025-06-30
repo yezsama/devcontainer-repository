@@ -41,7 +41,7 @@ install_pkgs() {
 # 2. install Rust Dev Tools
 ############################################
 echo "  Installing Rust Dev Tools …"
-install_pkgs build-essential lldb lldb-server lldb-vscode pkg-config libssl-dev libclang-dev 
+install_pkgs build-essential lldb pkg-config libssl-dev libclang-dev 
 
 ############################################
 # 3. install tools that are not available in the package manager
