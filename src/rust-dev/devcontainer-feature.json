@@ -1,0 +1,14 @@
+// .devcontainer/features/rust-debug/devcontainer-feature.json
+{
+  "id": "rust-debug",
+  "version": "1.0.0",
+  "name": "Rust Debug & Dev Tools",
+  "description": "Installs GDB/LLDB, Rust debug scripts, sanitizers, Miri, and cargo-watch",
+  "options": {
+    "withNightlyTools": {
+      "type": "boolean",
+      "default": true,
+      "description": "Also install Miri and rust-src"
+    }
+  }
+}
