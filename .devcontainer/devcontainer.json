@@ -1,0 +1,11 @@
+{
+    "name": "devcontainer-features-dev",
+    "image": "ubuntu:24.04",
+    "features": {
+        "ghcr.io/devcontainers/features/node:latest": {},
+        "ghcr.io/yezsama/devcontainer-features/base-tools:latest": {},
+        "ghcr.io/yezsama/devcontainer-features/gemini-cli:latest": {},
+        "ghcr.io/yezsama/devcontainer-features/claude-code:latest": {},
+        "ghcr.io/yezsama/devcontainer-features/openai-codex:latest": {}
+    }
+}
