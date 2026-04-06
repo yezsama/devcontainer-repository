@@ -1,7 +1,7 @@
 {
-  "id": "dotfile-bootstrap",
+  "id": "dotfile",
   "version": "1.0.0",
-  "name": "Dotfile Bootstrap (root)",
+  "name": "dotfile",
   "description": "Clones PeteJohn6/dotfile into the root home directory and runs bootstrap-up.sh to initialize the dev container environment.",
   "documentationURL": "https://github.com/PeteJohn6/dotfile",
   "keywords": [

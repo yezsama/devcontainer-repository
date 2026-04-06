@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "Activating feature 'dotfile-bootstrap'"
+echo "Activating feature 'dotfile'"
 
 : "${BRANCH:=master}"
 
@@ -96,7 +96,7 @@ main() {
     sync_repository "$repo_dir"
     run_bootstrap_up "$repo_dir"
 
-    echo "dotfile-bootstrap feature installation complete."
+    echo "dotfile feature installation complete."
 }
 
 main "$@"

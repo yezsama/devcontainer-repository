@@ -1,4 +1,4 @@
-# Dotfile Bootstrap (root) (dotfile-bootstrap)
+# dotfile (dotfile)
 
 Clones `PeteJohn6/dotfile` into the root home directory and runs `bootstrap-up.sh` during feature installation.
 
@@ -8,7 +8,7 @@ This feature intentionally configures the container as `root`, so the repository
 
 ```json
 "features": {
-    "ghcr.io/yezsama/devcontainer-features/dotfile-bootstrap:1": {}
+    "ghcr.io/yezsama/devcontainer-features/dotfile:1": {}
 }
 ```
 
