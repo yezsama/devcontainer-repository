@@ -1,24 +1,40 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 echo "🔧 Installing OpenAI Codex CLI …"
 
-############################################
-# 1. Node.js 已由依赖 Feature 提供，直接用 npm 安装 Codex
-############################################
-if ! command -v npm >/dev/null 2>&1; then
-    echo "❌  Node.js / npm not found. Make sure the Node Feature is installed before openai-codex."
+INSTALL_URL="https://chatgpt.com/codex/install.sh"
+INSTALL_DIR="/usr/local/bin"
+CODEX_HOME_DIR="/usr/local/share/codex"
+
+install_dependencies() {
+    if command -v apt-get >/dev/null 2>&1; then
+        export DEBIAN_FRONTEND=noninteractive
+        apt-get update -y
+        apt-get install -y --no-install-recommends ca-certificates curl gawk gzip tar
+    elif command -v yum >/dev/null 2>&1; then
+        yum install -y ca-certificates curl gawk gzip tar
+    elif command -v apk >/dev/null 2>&1; then
+        apk add --no-cache ca-certificates curl gawk gzip tar
+    else
+        echo "❌ Unsupported package manager. Please install ca-certificates, curl, gawk, gzip and tar before openai-codex."
+        exit 1
+    fi
+}
+
+install_dependencies
+
+if command -v curl >/dev/null 2>&1; then
+    curl -fsSL "${INSTALL_URL}" | CODEX_INSTALL_DIR="${INSTALL_DIR}" CODEX_HOME="${CODEX_HOME_DIR}" sh
+elif command -v wget >/dev/null 2>&1; then
+    wget -qO- "${INSTALL_URL}" | CODEX_INSTALL_DIR="${INSTALL_DIR}" CODEX_HOME="${CODEX_HOME_DIR}" sh
+else
+    echo "❌ curl or wget not found. Please install one before openai-codex."
     exit 1
 fi
 
-npm install -g @openai/codex
-
-############################################
-# 2. 可选：为当前用户补全 PATH（某些基础镜像 npm 全局路径不在 PATH）
-############################################
 if ! command -v codex >/dev/null 2>&1; then
-    NPM_PREFIX=$(npm config get prefix)
-    echo "export PATH=\"${NPM_PREFIX}/bin:\$PATH\"" >> /etc/profile.d/codex.sh
+    echo "export PATH=\"${INSTALL_DIR}:\$PATH\"" > /etc/profile.d/codex.sh
 fi
 
 echo "✅ OpenAI Codex CLI installation finished!"

@@ -1,21 +1,11 @@
 {
   "id": "openai-codex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "OpenAI Codex CLI",
-  "description": "Installs the @openai/codex CLI and its shell completions.",
-  "documentationURL": "https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started",
+  "description": "Installs the OpenAI Codex CLI using the official standalone installer.",
+  "documentationURL": "https://developers.openai.com/codex",
   "licenseURL": "https://github.com/openai/codex/blob/main/LICENSE",
   "keywords": ["openai", "codex", "ai", "cli"],
-
-  "dependsOn": {
-    "ghcr.io/devcontainers/features/node": {
-      "version": "latest"
-    }
-  },
-
-  "installsAfter": [
-        "ghcr.io/devcontainers/features/node"
-    ],
 
   "containerEnv": {
     "CODEX_CLI_TELEMETRY_OPTOUT": "1"
