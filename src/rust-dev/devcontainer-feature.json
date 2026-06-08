@@ -1,9 +1,12 @@
 // .devcontainer/features/rust-debug/devcontainer-feature.json
 {
   "id": "rust-dev",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "Rust Debug & Dev Tools",
   "description": "Installs GDB/LLDB, Rust debug scripts, sanitizers, Miri, and cargo-watch",
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
   "options": {
     "withNightlyTools": {
       "type": "boolean",
