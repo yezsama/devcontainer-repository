@@ -1,7 +1,7 @@
 
 # OpenAI Codex CLI (openai-codex)
 
-Installs the @openai/codex CLI and its shell completions.
+Installs the OpenAI Codex CLI using the official standalone installer.
 
 ## Example Usage
 
